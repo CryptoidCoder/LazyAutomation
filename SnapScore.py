@@ -274,14 +274,14 @@ def checkexitbutton():
 
 if buttonactive():
     send_picturemessage_top_person("This is a Bot") #do the first one (this opens the chat)
-    time.sleep(3) #wait 3 seconds between snaps
+    time.sleep(2) #wait 2 seconds between snaps
     keep_sending_picturemessage("This is also a bot") #this just uses the open chat
-    #for i in range(4):
     botnum = 1
+    time.sleep(2) #wait 2 seconds between snaps
     while True:
         keep_sending_picturemessage(f"This is bot #{botnum}") #this just uses the open chat
         botnum = botnum+1
-        time.sleep(3) #wait 3 seconds between snaps
+        time.sleep(2) #wait 2 seconds between snaps
         checkexitbutton()
     
 
