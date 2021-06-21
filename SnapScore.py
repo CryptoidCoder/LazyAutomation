@@ -106,7 +106,7 @@ def open_top_person():
 #opens the camera in the top person chat
 def open_camera_top_person():
     open_top_person() #open the chat with the top person
-    time.sleep(0.5) #wait 1/2 second
+    time.sleep(1) #wait 1 second
     mouse.move(-1000,1000) #go to bottom left corner
     mouse.move(x=20) #go right a bit
     mouse.move(y=-20) #go up a bit
@@ -115,7 +115,7 @@ def open_camera_top_person():
 #take a picture for the top persons chat
 def take_picture_top_person():
     open_camera_top_person() #opens the camera in the top persons chat
-    time.sleep(0.5) #wait 1/2 second
+    time.sleep(1) #wait 1 second
     mouse.move(1000,1000) #go to the bottom right corner
     mouse.move(y=-100)#go up a bit
     mouse.move(x=-250)#go left a bit
@@ -123,7 +123,7 @@ def take_picture_top_person():
     
 def send_picture_top_person():
     take_picture_top_person()
-    time.sleep(0.5) #wait 1/2 second
+    time.sleep(1) #wait 1 second
     mouse.move(1000,1000) #go to the bottom right corner
     mouse.move(y=-40)#go up into the apps bottom corner not the screens bottom corner
     click()
@@ -167,7 +167,7 @@ def keep_sending_picturemessage(message):
     click()
     
     #take picture
-    time.sleep(0.5) #wait 1/2 second
+    time.sleep(1) #wait 1 second
     mouse.move(1000,1000) #go to the bottom right corner
     mouse.move(y=-100)#go up a bit
     mouse.move(x=-250)#go left a bit
@@ -283,3 +283,5 @@ if buttonactive():
         botnum = botnum+1
         time.sleep(1) #wait 1 second between snaps
         checkexitbutton()
+
+
