@@ -12,6 +12,10 @@ If it is HID:
 -   This i will leave up to you; you need to get from micro USB (on the Pico) to whatever your phone inputs (USB Type-C, Micro USB, Anyting Else) - I suggest you get a Micro-USB -> USB-A Cable and then buy the appropriate USB-A OTG adapter.
 
 
+TODO:
+- Each Project has an individual TODO, this is the entire project TODO
+- make everything just autorun (after a button is pressed when plugged in) - so all that needs to happen, is you plug the pico into the device; while holding the button, and the code auto executes, but if the button isn't pressed then it will exit
+
 ## Index:
 
 ### TikTok Autoliker:
