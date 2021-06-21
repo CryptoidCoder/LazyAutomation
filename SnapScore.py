@@ -8,7 +8,7 @@ Basis; a Snapscore goes up everytime you send a picture (not text only).
 Method;
 - open the top person on snapchat
 - take a picture (this will be of whatever the camera sees - black/the ceiling)
-- add text???
+- add text
 - send picture
 
 - Repeat
@@ -97,7 +97,7 @@ def openspotlight():
 #open the top chat
 def open_top_person():
     openchat() #open the chat tab
-    time.sleep(1) #wait 1 second
+    time.sleep(0.5) #wait 1/2 second
     mouse.move(-1000,-1000)#go to top left corner
     mouse.move(y=100)#go down a bit
     mouse.move(x=300) #go right a bit (so you open the chat not their profile)
@@ -106,7 +106,7 @@ def open_top_person():
 #opens the camera in the top person chat
 def open_camera_top_person():
     open_top_person() #open the chat with the top person
-    time.sleep(1) #wait 1 second
+    time.sleep(0.5) #wait 1/2 second
     mouse.move(-1000,1000) #go to bottom left corner
     mouse.move(x=20) #go right a bit
     mouse.move(y=-20) #go up a bit
@@ -115,7 +115,7 @@ def open_camera_top_person():
 #take a picture for the top persons chat
 def take_picture_top_person():
     open_camera_top_person() #opens the camera in the top persons chat
-    time.sleep(1) #wait 1 second
+    time.sleep(0.5) #wait 1/2 second
     mouse.move(1000,1000) #go to the bottom right corner
     mouse.move(y=-100)#go up a bit
     mouse.move(x=-250)#go left a bit
@@ -123,7 +123,7 @@ def take_picture_top_person():
     
 def send_picture_top_person():
     take_picture_top_person()
-    time.sleep(1) #wait 1 second
+    time.sleep(0.5) #wait 1/2 second
     mouse.move(1000,1000) #go to the bottom right corner
     mouse.move(y=-40)#go up into the apps bottom corner not the screens bottom corner
     click()
@@ -131,7 +131,7 @@ def send_picture_top_person():
     click()
 
 def addtext(text):
-    time.sleep(1) #wait 1 second
+    time.sleep(0.5) #wait 1/2 second
     mouse.move(1000,-1000)#go to top right corner
     mouse.move(y=40)#go down into the apps top corner not the screens top corner
     mouse.move(x=-15) #go to the left a little bit so that it is in the app
@@ -144,7 +144,7 @@ def addtext(text):
 
 def send_picturemessage_top_person(message):
     take_picture_top_person()
-    time.sleep(1) #wait 1 second
+#    time.sleep(1) #wait 1 second
     addtext(message)
     goto("centre")
     click() #click the centre to exit the text menu
@@ -155,7 +155,7 @@ def send_picturemessage_top_person(message):
     mouse.move(y=-38)#go up to the send button
     flashinbuiltLED()
     click()
-    time.sleep(2) #wait 2 seconds
+    time.sleep(1) #wait 1 seconds
     click()
     
 def keep_sending_picturemessage(message):
@@ -167,14 +167,14 @@ def keep_sending_picturemessage(message):
     click()
     
     #take picture
-    time.sleep(1) #wait 1 second
+    time.sleep(0.5) #wait 1/2 second
     mouse.move(1000,1000) #go to the bottom right corner
     mouse.move(y=-100)#go up a bit
     mouse.move(x=-250)#go left a bit
     click()
     
     #add text
-    time.sleep(1) #wait 1 second
+#    time.sleep(1) #wait 1 second
     addtext(message)
     goto("centre")
     click() #click the centre to exit the text menu
@@ -185,7 +185,7 @@ def keep_sending_picturemessage(message):
     mouse.move(y=-38)#go up to the send button
     flashinbuiltLED()
     click()
-    time.sleep(2) #wait 2 seconds
+    time.sleep(1) #wait 1 second
     click()
     
     
@@ -274,15 +274,12 @@ def checkexitbutton():
 
 if buttonactive():
     send_picturemessage_top_person("This is a Bot") #do the first one (this opens the chat)
-    time.sleep(2) #wait 2 seconds between snaps
+    time.sleep(1) #wait 1 second between snaps
     keep_sending_picturemessage("This is also a bot") #this just uses the open chat
     botnum = 1
-    time.sleep(2) #wait 2 seconds between snaps
+    time.sleep(1) #wait 1 second between snaps
     while True:
         keep_sending_picturemessage(f"This is bot #{botnum}") #this just uses the open chat
         botnum = botnum+1
-        time.sleep(2) #wait 2 seconds between snaps
+        time.sleep(1) #wait 1 second between snaps
         checkexitbutton()
-    
-
-
