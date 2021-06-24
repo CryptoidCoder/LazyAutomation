@@ -17,6 +17,7 @@ TODO:
 - make everything just autorun (after a button is pressed when plugged in) - so all that needs to happen, is you plug the pico into the device; while holding the button, and the code auto executes, but if the button isn't pressed then it will exit
 
 ## Index:
+<hr>
 
 ### TikTok Autoliker:
 Are you tired of be a good friend, do you feel you just can't be bothered to go through your friends TikToks and endlessly give them likes?
@@ -25,6 +26,7 @@ Well i have the solution for you.
 This script can just be renamed `code.py` - to run on boot, and then open TikTok go to Following, and plug the Pico into your device. 
 Voila it will like every video.
 
+<hr>
 
 ### SnapChat SnapScorer:
 Are you just straight fed up of keeping those streaks going?
